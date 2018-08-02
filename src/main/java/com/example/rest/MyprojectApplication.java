@@ -32,6 +32,12 @@ public class MyprojectApplication {
 	public String home() {
 		try {
 			System.out.println("111111111111111111");
+			System.out.println("111111111111111111");
+			System.out.println("111111111111111111");
+			System.out.println("111111111111111111");
+			System.out.println("111111111111111111");
+			System.out.println("111111111111111111");
+			System.out.println("111111111111111111");
 			User user = testBiz.getUser(1);
 			System.out.println(user.getUsername());
 			System.out.println(user.getId());
