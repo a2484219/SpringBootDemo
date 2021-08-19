@@ -26,3 +26,4 @@ nbdist/
 target/
 .mvn/
 .git/
+out/

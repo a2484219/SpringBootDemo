@@ -1,6 +1,6 @@
-package com.example.interceptor;
+package com.example1.interceptor;
 
-import com.example.annotation.MyAnnotation;
+import com.example1.annotation.MyAnnotation;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;

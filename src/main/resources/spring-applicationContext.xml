@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+             xmlns:yaocongfei="http://www.example1.org/schema/user"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+             http://www.springframework.org/schema/beans/spring-beans.xsd
+             http://www.example1.org/schema/user
+             http://www.example1.org/schema/user.xsd">
+    <!--xmlns 表示元素的URI位置（命名空间），主要是因为表示唯一性 xsi:schemaLocation表示XSD实际位置-->
+    <!--xsi:schemaLocation下面的需要成对出现 如user 和user.xsd 需要写在一起-->
+    <!--line 4会到line7找 这行会到spring.schemas去找 然后根据xsd 去检查-->
+
+
+    <!--xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance 已经成为业界默认的命名空间
+    而 xsi:schemaLocation 实际上是键值对-->
+
+    <!--为什么不要在Spring的配置里，配置上XSD的版本号?
+        因为如果没有配置版本号，取的就是当前jar里的XSD文件，减少了各种风险。
+        而且这样约定大于配置的方式很优雅-->
+
+             <yaocongfei:user id = "111" username = "lee" password= "bbb"/>
+</beans>

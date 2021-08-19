@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.example.mapper.UserMapper" >
-  <resultMap id="BaseResultMap" type="com.example.entity.User" >
+<mapper namespace="com.example1.mapper.UserMapper" >
+  <resultMap id="BaseResultMap" type="com.example1.entity.User" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="username" property="username" jdbcType="VARCHAR" />
     <result column="password" property="password" jdbcType="VARCHAR" />
@@ -12,21 +12,21 @@
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
-    from t_user
+    from t_user1
     where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from t_user
+    delete from t_user1
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.example.entity.User" >
-    insert into t_user (id, username, password
+  <insert id="insert" parameterType="com.example1.entity.User" >
+    insert into t_user1 (id, username, password
       )
     values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.example.entity.User" >
-    insert into t_user
+  <insert id="insertSelective" parameterType="com.example1.entity.User" >
+    insert into t_user1
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         id,
@@ -50,8 +50,8 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.example.entity.User" >
-    update t_user
+  <update id="updateByPrimaryKeySelective" parameterType="com.example1.entity.User" >
+    update t_user1
     <set >
       <if test="username != null" >
         username = #{username,jdbcType=VARCHAR},
@@ -62,8 +62,8 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.example.entity.User" >
-    update t_user
+  <update id="updateByPrimaryKey" parameterType="com.example1.entity.User" >
+    update t_user1
     set username = #{username,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
